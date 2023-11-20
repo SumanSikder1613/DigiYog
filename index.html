@@ -51,7 +51,28 @@
                 <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
             </div>
     </header>
-    <div class="dropdown-container">
+    <div class="hero">
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide active" style="background-image: url('Images/image01.png');">
+            <div class="text-overlay">
+                <h1>Create & Innovate</h1>
+                <p>Discover amazing things with us!</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('Images/image02.png');">
+            <div class="text-overlay">
+                <h1>Explore</h1>
+                <p>Discover amazing things with us!</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('Images/image03.png');">
+            <div class="text-overlay">
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem Ipsum lorem ipsum us!</p>
+            </div>
+        </div>
+</div>
     <div class="dropdown">
         <input type="text" class="textbox" placeholder="Dropdown Menu" readonly>
         <div class="option">
@@ -63,41 +84,8 @@
         </div>
     </div>
 </div>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".sub-btn").click(function(){
-                $(this).next(".sub-menu").slideToggle();
-            });
-
-            $(".more-btn").click(function(){
-                $(this).next(".more-menu").slideToggle();
-            });
-            
-        });
-
-        var menu= document.querySelector(".menu");
-        var menuBtn= document.querySelector(".menu-btn");
-        var closeBtn= document.querySelector(".close-btn");
-
-        menuBtn.addEventListener("click", ()=>{
-            menu.classList.add("active");
-        });
-
-        closeBtn.addEventListener("click", ()=>{
-            menu.classList.remove("active");
-        });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   <script>
-       function show(anything){
-           document.querySelector('.textbox').value=
-           anything;
-       }
-       let dropdown = document.querySelector('.dropdown');
-       dropdown.onclick= function(){
-           dropdown.classList.toggle('active');
-       }
-   </script>
+<script src="index.js" charset="UTF-8"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

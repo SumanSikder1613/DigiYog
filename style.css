@@ -127,15 +127,15 @@ header .navigation .menu{
     border: 1px solid white;
     border-radius: 10px;
 }
-.dropdown-container{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    background: #fafafa;
+.hero::before{
+    content: '';
+    position: relative;
 }
 .dropdown{
-    position: relative;
-    margin-top: 100px;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    right: 0;
     width: 50%;
     height: 50px;
 }
@@ -153,13 +153,11 @@ header .navigation .menu{
     transform: rotate(-45deg);
     transition: 0.2s;
     pointer-events: none;
-
 }
 .dropdown.active::before{
     top: 22px;
     transform: rotate(-225deg);
 }
-
 .dropdown input{
     position: absolute;
     top: 0;
@@ -200,8 +198,44 @@ header .navigation .menu{
     font-size: 1.2em;
     top: 4px;  
 }
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.text-overlay h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    text-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+}
 
+.text-overlay p {
+    font-size: 2em;
+}
 
+.active {
+    opacity: 0.9;
+}
 @media (max-width: 1060px){
     header .navigation .menu{
         position: fixed;
@@ -288,7 +322,12 @@ header .navigation .menu{
         padding: 0;
         border: none;
     }
-   
+    .text-overlay h1 {
+        font-size: 3em;
+    }
+    .text-overlay p {
+        font-size: 1em;
+    }
 
 
 
