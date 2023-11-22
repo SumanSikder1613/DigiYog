@@ -127,15 +127,66 @@ header .navigation .menu{
     border: 1px solid white;
     border-radius: 10px;
 }
-.hero::before{
-    content: '';
+.hero-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text-overlay h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-overlay .Explore{
+    font-size: 7em;
+}
+.text-overlay .Artificial-Intelligence{
+    font-size: 6em;
+    letter-spacing: 2px;
+}
+.Artificial-Intelligence span{
+    color: #EF1C47;
+}
+.text-overlay p {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+    opacity: 1;
+}
+
+.dropdown-container{
+     display: flex;
+     justify-content: center;
+     background: #fafafa;
 }
 .dropdown{
     position: absolute;
     top: 15%;
-    left: 25%;
-    right: 0;
     width: 50%;
     height: 50px;
 }
@@ -153,11 +204,13 @@ header .navigation .menu{
     transform: rotate(-45deg);
     transition: 0.2s;
     pointer-events: none;
+
 }
 .dropdown.active::before{
     top: 22px;
     transform: rotate(-225deg);
 }
+
 .dropdown input{
     position: absolute;
     top: 0;
@@ -193,49 +246,76 @@ header .navigation .menu{
     background: #62baea;
     color: #fff;
 }
-.dropdown  .option div .ion-icon{
+.dropdown  .option div ion-icon{
     position: relative;
     font-size: 1.2em;
     top: 4px;  
 }
-.slider-container {
+.trending-products{
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: auto;
+    background:#f7f7f7;
 }
-.slider {
-    display: flex;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-.slide {
-    min-width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.center-text h2{
+    color: #111;
+    font-size: 38px;
+    text-transform: capitalize;
     text-align: center;
-    color: white;
+    
 }
-.text-overlay h1 {
-    font-size: 5em;
-    margin-bottom: 10px;
-    text-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+.selling-products{
+    width: 100%;
+    height: auto;
+    background:#f7f7f7;
+}
+.center-text h2{
+    color: #111;
+    font-size: 38px;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+.center-text span{
+    color: #EF1C47;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-.text-overlay p {
-    font-size: 2em;
+.product-item {
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
-.active {
-    opacity: 0.9;
+.product-item:hover{
+    transform: scale(1.1);
 }
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.product-item p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+
 @media (max-width: 1060px){
     header .navigation .menu{
         position: fixed;
@@ -252,7 +332,6 @@ header .navigation .menu{
         overflow-y:auto;
         transition: 0.5s;
         transition-property: right, visibility;
-
     }
     header .navigation .menu.active{
         right: 0;
@@ -322,12 +401,19 @@ header .navigation .menu{
         padding: 0;
         border: none;
     }
-    .text-overlay h1 {
+    .text-overlay h1{
         font-size: 3em;
     }
-    .text-overlay p {
+    .text-overlay p{
         font-size: 1em;
     }
+    .text-overlay .Explore{
+        font-size: 2.8em;
+    }
+    .center-text h2{
+        font-size: 25px;
+    }
+    
 
 
 
