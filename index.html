@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="UTF-8"></script>
 </head>
 <body>
+    <!--NavBar-->
     <header>
         <a href="#" class="logo">DigiYog</a>
         <div class="navigation">
@@ -51,6 +52,7 @@
                 <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
             </div>
     </header>
+    <!--Hero-->
     <div class="hero-container">
             <div class="slider">
                 <div class="slide active" style="background-image: url('Images/image01.png');">
@@ -73,19 +75,21 @@
                
             </div>
         </div>
+        <!--DropDown-->
             <div class="dropdown-container">
-            <div class="dropdown">
+            <div class="dropdown">my-
                 <input type="text" class="textbox" placeholder="Dropdown Menu" readonly>
                 <div class="option">
-                    <div onclick="show('Pictures')">Pictures</div>
-                    <div onclick="show('Video')">Video</div>
-                    <div onclick="show('Editorial')">Editorial</div>
-                    <div onclick="show('Templates')">Templates</div>
-                    <div onclick="show('AI generator')"> AI generator</div>
+                    <div id="pictures">Pictures</div>
+                    <div class="my-button" onclick="show('Videos')">Videos</div>
+                    <div class="my-button" onclick="show('Editorial')">Editorial</div>
+                    <div class="my-button" onclick="show('Templates')">Templates</div>
+                    <div class="my-button" onclick="show('AI generator')"> AI generator</div>
                 </div>
             </div>
             </div>
             </div>
+            <!--Trending products-->
             <section class="trending-products" id="trending">
                 <div class="center-text">
                     <h2>Our Trending <span>Products</span></h2>
@@ -169,11 +173,8 @@
                         <h3>Image Item 6</h3>
                         <p>Description of Item 6.</p>
                     </div>
-                    
-            
-                   
-
             </section>
+            <!--Best Selling Products-->
             <section class="selling-products" id="trending">
                 <div class="center-text">
                     <h2>Our Best Selling <span>Products</span></h2>

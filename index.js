@@ -1,4 +1,5 @@
- $(document).ready(function(){
+//NavBar
+$(document).ready(function(){
 $(".sub-btn").click(function(){
 $(this).next(".sub-menu").slideToggle();
 });
@@ -21,6 +22,8 @@ closeBtn.addEventListener("click", ()=>{
  menu.classList.remove("active");
  });
 
+ //DropDown
+
  function show(anything){
  document.querySelector('.textbox').value= anything;
    }
@@ -30,7 +33,11 @@ closeBtn.addEventListener("click", ()=>{
    dropdown.classList.toggle('active');
           }
 
-// script.js
+  document.getElementById("pictures").onclick = function () {
+  location.href = "product.html";
+          }
+
+// hero
 
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
